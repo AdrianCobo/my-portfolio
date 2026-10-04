@@ -2,494 +2,560 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrián Cobo · Ingeniero de Robótica y Visión Artificial</title>
+    <meta name="description" content="Portfolio de Adrián Cobo, ingeniero de Robótica Software y Máster en Visión Artificial. Responsable de Robótica e IA en Next Level Technologies (NLT).">
+    <meta name="author" content="Adrián Cobo">
+    <meta name="theme-color" content="#0a0e12">
+
+    <!-- Open Graph (vista previa al compartir el enlace) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adrián Cobo · Ingeniero de Robótica y Visión Artificial">
+    <meta property="og:description" content="Robótica autónoma, visión artificial e IA en el edge. Responsable de Robótica e IA en NLT.">
+    <meta property="og:image" content="img/perfil.jpg">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0e12'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%231CB698'%3EAC%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
+    <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="#">Adrián</a>
-            </div>
-            <nav id="nav">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- CABECERA -->
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo" aria-label="Adrián Cobo, ir al inicio">
+                <span class="logo-mark">AC</span>
+                <span class="logo-text">Adrián Cobo</span>
+            </a>
+            <nav id="nav" class="nav" aria-label="Navegación principal">
                 <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#sobremi">Sobre mí</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
                 <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
-
-    <!-- SECCION INICIO -->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/hero.jpg" alt="">
-            </div>
-            <h1>Adrián Cobo</h1>
-            <h2>Ingeniero de Robótica Software</h2>
-            <h2>Máster en Visión Artificial</h2>
-            <div class="redes">
-            <a href="https://github.com/AdrianCobo"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/cobo_24.7/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/adri%C3%A1n-cobo-merino-8909991b1/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/@CobichueloRoboticsEsp"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Adrián Cobo.</span> Ingeniero de robótica software y Máster en Visión Artificial por la Universidad Rey Juan Carlos.</p>
+    <main id="main">
 
-            <div class="fila">
-                <!-- datos personales -->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Cumpleaños</strong>
-                            24-07-2002
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            +34 *********
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            adrian.cobo.mh@gmail.com
-                        </li>
-                        <li>
-                            <strong>Dirección</strong>
-                            Madrid, España
-                        </li>
-                        <li>
-                            <strong>Cargo</strong>
-                            <span>Estudiante</span>
-                        </li>
-                    </ul>
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-text reveal">
+                <p class="status-pill"><span class="dot"></span> Responsable de Robótica e IA en NLT</p>
+                <h1>Adrián Cobo</h1>
+                <p class="hero-role"><span class="nw">Ingeniero de Robótica Software</span> <span class="sep">·</span> <span class="nw">Máster en Visión Artificial</span></p>
+                <p class="hero-lead">
+                    Diseño sistemas autónomos que perciben, entienden y actúan en el mundo real:
+                    desde la navegación con ROS&nbsp;2 hasta la inteligencia artificial en el edge
+                    para defensa y seguridad.
+                </p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn btn-primary">Ver proyectos <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contacto" class="btn btn-ghost">Contactar</a>
                 </div>
+                <div class="social">
+                    <a href="https://github.com/AdrianCobo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/adri%C3%A1n-cobo-merino-8909991b1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@CobichueloRoboticsEsp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://cobichuelo-learn-robotic.blogspot.com/" target="_blank" rel="noopener noreferrer" aria-label="Blog"><i class="fa-solid fa-pen-nib"></i></a>
+                </div>
+            </div>
 
-                <!-- intereses -->
-                <div class="col">
-                    <h3>Intereses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>JUEGOS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-headphones"></i>
-                            <span>MUSICA</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>VIAJAR</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-apple"></i>
-                            <span>MAC OS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-person-hiking"></i>
-                            <span>DEPORTE</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-car"></i>
-                            <span>AUTOS</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-camera"></i>
-                            <span>FOTOS</span>
-                        </div>
-                        
-                    </div>
+            <div class="hero-photo reveal">
+                <div class="photo-frame">
+                    <img src="img/perfil.jpg" alt="Retrato de Adrián Cobo" width="900" height="972">
+                </div>
+                <div class="photo-card">
+                    <span class="photo-card-label">Actualmente</span>
+                    <strong>Next Level Technologies</strong>
+                    <span>Proyecto SIRA-CUAS · Counter-UAS</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
-        <div class="contenido-seccion">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <span>C</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>75%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>C++</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>89%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Python</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Ros y Ros2</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>81%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Machine Learning</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>75%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Professional Skills -->
-                <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
-                        <span>Comunicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>70%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>99%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>94%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <ul class="stats reveal">
+                <li><strong>7,5&nbsp;M€</strong><span>Proyecto estratégico SIRA-CUAS (CDTI)</span></li>
+                <li><strong>15</strong><span>Proyectos de robótica e IA publicados</span></li>
+                <li><strong>3</strong><span>Países: España, Bélgica y Dinamarca</span></li>
+                <li><strong>2 títulos</strong><span>Grado y Máster por la Universidad Rey Juan Carlos</span></li>
+            </ul>
         </div>
     </section>
 
-<!-- SECCION CURRICULUM -->
-<section id="curriculum" class="curriculum">
-    <div class="contenido-seccion">
-        <h2>Curriculum</h2>
-        <div class="fila">
-            <div class="col izquierda">
-                <h3>Educación</h3>
-                <div class="item izq">
-                    <h4>Máster en Visión Artificial</h4>
-                    <span class="casa">
-                        <a href="https://www.urjc.es/estudios/master/834-vision-artificial#itinerario-formativo" target="_blank" rel="noopener noreferrer" style="color: #1CB698; text-decoration: none;">
-                            Universidad Rey Juan Carlos
-                        </a>
-                    </span>
-                    <span class="fecha">2024 - 2025</span>
-                    <p>En este máster me especialicé en el procesamiento de imágenes y señales visuales, estudiando técnicas avanzadas de aprendizaje automático y redes neuronales para aplicaciones en visión computacional, reconocimiento de patrones y análisis de datos visuales. Amplié mis conocimientos en segmentación de imágenes, detección de objetos y visión 3D, con un enfoque en el uso de estas tecnologías en robótica y automatización.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-                <div class="item izq">
-                    <h4>Ingeniería Robotica Software</h4>
-                    <span class="casa">
-                        <a href="https://www.urjc.es/estudios/grado/3099-ingenieria-de-robotica-software#itinerario-formativo" target="_blank" rel="noopener noreferrer" style="color: #1CB698; text-decoration: none;">
-                            Universidad Rey Juan Carlos
-                        </a>
-                    </span>
-                    <span class="fecha">2020 - 2024</span>
-                    <p>Carrera universitaria donde desarrollé mis habilidades como programador así como adquirí las distintas herramientas que me permiten crear aplicaciones robóticas complejas en robots reales tales como navegación autónoma, creación de mapas a partir de sensores, etc.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-                <div class="item izq">
-                    <h4>PyTorch: Deep Learning and Artificial Intelligence</h4>
-                    <span class="casa">Udemy</span>
-                    <span class="fecha">2022 - 2023</span>
-                    <p>Curso de PyTorch de nivel medio enfocado en ANNs, DNNs, Time Series Forecasting, CNNs, Natural Language Processing, RNNS, Computer Vision, etc. Puede encontrar el curso en: https://www.udemy.com/course/pytorch-deep-learning/</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-                <div class="item izq">
-                    <h4>Blockchain, Solidity, and Full Stack Web3 Development with JavaScript</h4>
-                    <span class="casa">freeCodeCamp.org</span>
-                    <span class="fecha">2022</span>
-                    <p>En este curso aprendí las bases de la tecnología blockchain y adquirí distintas técnicas para desarrollar mis propias aplicaciones reales tales como la creación de contratos para almacenar dinero, utilizar estándares como los ERC20, un contrato para una lotería descentralizada, etc y la creación de sus correspondientes páginas web para que el usuario pueda interactuar con los contratos fácilmente.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- SOBRE MÍ -->
+    <section id="sobremi" class="section">
+        <div class="container">
+            <header class="section-head reveal">
+                <span class="eyebrow">01 — Sobre mí</span>
+                <h2>Percepción y autonomía para robots reales</h2>
+            </header>
 
-            <div class="col derecha">
-                <h3>Experiencia de trabajo</h3>
-                <div class="item der">
-                    <h4>Ingeniero de Robótica / Responsable del Departamento de Robótica</h4>
-                    <span class="casa">
-                        <a href="https://nextleveltechnologies.es" target="_blank" rel="noopener noreferrer"
-                           style="color: #1CB698; text-decoration: none;">
-                            Next Level Technologies (NLT) — Leganés, Madrid
-                        </a>
-                    </span>
-                    <span class="fecha">19/01/2026 - Actualidad</span>
+            <div class="about-grid">
+                <div class="about-text reveal">
                     <p>
-                        Responsable del departamento de robótica en Next Level Technologies (NLT), empresa española de I+D+i 
-                        en defensa, seguridad e industria. Representante de NLT en las reuniones de dirección del proyecto 
-                        estratégico <strong><a href="https://nextleveltechnologies.es/#/actualidad/nlt-sira-cuas" target="_blank" rel="noopener noreferrer"
-                           style="color: #fff; text-decoration: none;">SIRA-CUAS</a></strong> 
-                        (Sistema Inteligente de Reconocimiento Acústico – Counter UAS), valorado en 7,5 M€ 
-                        y financiado por el CDTI en el marco del programa Misiones Ciencia e Innovación 2025. 
-                        El proyecto desarrolla un sistema distribuido de sensores acústicos inteligentes para la detección, 
-                        clasificación y geolocalización de amenazas UAS/FPV, combinando IA, edge computing y análisis acústico 
-                        avanzado. NLT aporta las capacidades de IA aplicada a entornos acústicos complejos y edge computing, 
-                        esenciales para la toma de decisiones autónoma del sistema.
+                        Soy ingeniero de <strong>Robótica Software</strong> y <strong>Máster en Visión Artificial</strong>
+                        por la Universidad Rey Juan Carlos. Actualmente soy responsable de Robótica e Inteligencia Artificial en
+                        <strong>Next Level Technologies (NLT)</strong>, empresa española de I+D+i en defensa,
+                        seguridad e industria, y represento a la compañía en la dirección del proyecto estratégico
+                        <strong>SIRA-CUAS</strong>.
                     </p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
+                    <p>
+                        Mi trabajo se mueve entre la percepción y la toma de decisiones: fusión de sensores
+                        (nube de puntos 3D e imagen RGB), SLAM, navegación autónoma con ROS&nbsp;2 y modelos de
+                        aprendizaje profundo desplegados en dispositivos edge. Me motiva llevar los algoritmos
+                        del papel a robots que funcionan fuera del laboratorio.
+                    </p>
+
+                    <div class="interests">
+                        <span class="interests-label">Fuera del trabajo</span>
+                        <ul>
+                            <li><i class="fa-solid fa-plane"></i> Viajar</li>
+                            <li><i class="fa-solid fa-person-hiking"></i> Deporte</li>
+                            <li><i class="fa-solid fa-camera"></i> Fotografía</li>
+                            <li><i class="fa-solid fa-book"></i> Lectura</li>
+                            <li><i class="fa-solid fa-car"></i> Motor</li>
+                            <li><i class="fa-solid fa-headphones"></i> Música</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="item der">
-                    <h4>Prácticas</h4>
-                    <span class="casa">
-                        <a href="https://www.tractonomy.com/" target="_blank" rel="noopener noreferrer" style="color: #1CB698; text-decoration: none;">
-                            Tractonomy Robotics (Bélgica)
-                        </a>
-                    </span>
-                    <span class="fecha">01/02/2024 - 24/04/2024</span>
-                    <p>Investigación, diseño y evaluación de una solución de visión artificial para que los robots móviles logísticos de la empresa agarraran objetos de forma eficiente. La solución se basó en enfoques de fusión de sensores combinando tecnología de nube de puntos 3D e imágenes RGB, empleando técnicas de aprendizaje automático para alcanzar los objetivos finales.</p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
+
+                <aside class="facts card reveal">
+                    <dl>
+                        <div><dt>Puesto</dt><dd>Responsable de Robótica e IA · NLT</dd></div>
+                        <div><dt>Especialidad</dt><dd>Robótica autónoma y visión artificial</dd></div>
+                        <div><dt>Formación</dt><dd>Máster en Visión Artificial (URJC)</dd></div>
+                        <div><dt>Ubicación</dt><dd>Madrid, España</dd></div>
+                        <div><dt>Email</dt><dd><a href="mailto:adrian.cobo.mh@gmail.com">adrian.cobo.mh@gmail.com</a></dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA Y FORMACIÓN -->
+    <section id="experiencia" class="section section-alt">
+        <div class="container">
+            <header class="section-head reveal">
+                <span class="eyebrow">02 — Trayectoria</span>
+                <h2>Experiencia profesional</h2>
+            </header>
+
+            <ol class="timeline">
+                <li class="timeline-item reveal">
+                    <div class="timeline-date">
+                        <span>Ene 2026 — Actualidad</span>
+                        <small>Leganés, Madrid</small>
                     </div>
-                </div>
-                <div class="item der">
-                    <h4>En desarrollo</h4>
-                    <span class="casa">Sin Especificar</span>
-                    <span class="fecha"></span>
-                    <p>Clasificado</p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
+                    <article class="card timeline-card">
+                        <h3>Responsable de Robótica e IA</h3>
+                        <a class="org" href="https://nextleveltechnologies.es" target="_blank" rel="noopener noreferrer">Next Level Technologies (NLT) <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <ul class="bullets">
+                            <li>Dirección del área de Robótica e Inteligencia Artificial de NLT, empresa española de I+D+i en defensa, seguridad e industria.</li>
+                            <li>Representante de NLT en las reuniones de dirección del proyecto estratégico
+                                <a href="https://nextleveltechnologies.es/#/actualidad/nlt-sira-cuas" target="_blank" rel="noopener noreferrer">SIRA-CUAS</a>
+                                (Sistema Inteligente de Reconocimiento Acústico – Counter UAS), valorado en 7,5&nbsp;M€ y financiado por el CDTI dentro del programa Misiones Ciencia e Innovación 2025.</li>
+                            <li>El proyecto desarrolla una red distribuida de sensores acústicos inteligentes para detectar, clasificar y geolocalizar amenazas UAS/FPV.</li>
+                            <li>NLT aporta la IA aplicada a entornos acústicos complejos y el edge computing necesarios para la toma de decisiones autónoma del sistema.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Counter-UAS</li><li>IA</li><li>Edge computing</li><li>Análisis acústico</li><li>Dirección técnica</li>
+                        </ul>
+                    </article>
+                </li>
+
+                <li class="timeline-item reveal">
+                    <div class="timeline-date">
+                        <span>Feb 2024 — Abr 2024</span>
+                        <small>Bélgica</small>
                     </div>
-                </div>
+                    <article class="card timeline-card">
+                        <h3>Ingeniero de Visión Artificial en prácticas</h3>
+                        <a class="org" href="https://www.tractonomy.com/" target="_blank" rel="noopener noreferrer">Tractonomy Robotics <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <ul class="bullets">
+                            <li>Investigación, diseño y evaluación de una solución de visión artificial para que los robots móviles logísticos de la empresa agarraran objetos de forma eficiente.</li>
+                            <li>Enfoque de fusión de sensores que combina nube de puntos 3D e imágenes RGB, con técnicas de aprendizaje automático para alcanzar los objetivos finales.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Nubes de puntos 3D</li><li>RGB</li><li>Fusión de sensores</li><li>Machine Learning</li><li>Robots logísticos</li>
+                        </ul>
+                    </article>
+                </li>
+            </ol>
+
+            <header class="section-head section-head-sub reveal">
+                <h2>Formación</h2>
+            </header>
+
+            <div class="edu-grid">
+                <article class="card edu-card reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <span class="edu-date">2024 — 2025</span>
+                    <h3>Máster en Visión Artificial</h3>
+                    <a class="org" href="https://www.urjc.es/estudios/master/834-vision-artificial#itinerario-formativo" target="_blank" rel="noopener noreferrer">Universidad Rey Juan Carlos</a>
+                    <p>Procesamiento de imágenes y señales visuales con aprendizaje automático y redes neuronales: segmentación, detección de objetos, reconocimiento de patrones y visión 3D, con foco en robótica y automatización.</p>
+                </article>
+                <article class="card edu-card reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-robot"></i></div>
+                    <span class="edu-date">2020 — 2024</span>
+                    <h3>Grado en Ingeniería de Robótica Software</h3>
+                    <a class="org" href="https://www.urjc.es/estudios/grado/3099-ingenieria-de-robotica-software#itinerario-formativo" target="_blank" rel="noopener noreferrer">Universidad Rey Juan Carlos</a>
+                    <p>Programación de aplicaciones robóticas complejas sobre robots reales: navegación autónoma, construcción de mapas a partir de sensores, localización y control.</p>
+                </article>
             </div>
 
+            <div class="courses reveal">
+                <span class="courses-label">Cursos complementarios</span>
+                <ul>
+                    <li>
+                        <a href="https://www.udemy.com/course/pytorch-deep-learning/" target="_blank" rel="noopener noreferrer">PyTorch: Deep Learning and Artificial Intelligence</a>
+                        <span>Udemy · 2022–2023 · ANNs, CNNs, RNNs, series temporales, NLP y visión</span>
+                    </li>
+                    <li>
+                        <span class="course-title">Blockchain, Solidity and Full Stack Web3 Development with JavaScript</span>
+                        <span>freeCodeCamp · 2022 · Contratos inteligentes, ERC-20 y dApps</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
-            <div class="galeria">
-                <a id="link" href="https://www.linkedin.com/posts/adri%C3%A1n-cobo-merino-8909991b1_my-robotic-batmobile-ive-built-a-low-cost-activity-7362455268233797632-pK-c?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFyFqwB-p-favjatAVnl-7_UDfbHKgCu-c">
-                    <div class="proyecto">
-                        <img src="img/15.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Robot Based on ROS2</h3>
-                            <p>With Autonomous Navigation</p>
-                        </div>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <header class="section-head section-head-row reveal">
+                <div>
+                    <span class="eyebrow">03 — Proyectos</span>
+                    <h2>Proyectos seleccionados</h2>
+                </div>
+                <div class="filters" role="group" aria-label="Filtrar proyectos">
+                    <button class="filter is-active" data-filter="todos" aria-pressed="true">Todos</button>
+                    <button class="filter" data-filter="robotica" aria-pressed="false">Robótica</button>
+                    <button class="filter" data-filter="vision" aria-pressed="false">Visión e IA</button>
+                </div>
+            </header>
+
+            <div class="projects">
+                <a class="project featured reveal" data-cat="robotica" href="https://www.linkedin.com/posts/adri%C3%A1n-cobo-merino-8909991b1_my-robotic-batmobile-ive-built-a-low-cost-activity-7362455268233797632-pK-c" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/15.jpg" alt="Robot móvil con forma de Batmóvil" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Robótica · ROS 2</span>
+                        <h3>Robotic Batmobile</h3>
+                        <p>Robot móvil de bajo coste basado en ROS&nbsp;2 con navegación autónoma.</p>
+                        <span class="project-link"><i class="fa-brands fa-linkedin-in"></i> Ver en LinkedIn</span>
                     </div>
                 </a>
-                <a id="link" href="https://github.com/AdrianCobo/perception_system_v2">
-                    <div class="proyecto">
-                        <img src="img/p14.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Passive SLAM System</h3>
-                            <p>Master's Thesis</p>
-                        </div>
+                <a class="project featured reveal" data-cat="vision" href="https://github.com/AdrianCobo/perception_system_v2" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p14.png" alt="Sistema de SLAM pasivo" loading="lazy" width="784" height="656"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Trabajo Fin de Máster</span>
+                        <h3>Sistema de SLAM pasivo</h3>
+                        <p>Localización y mapeado simultáneos a partir de percepción pasiva.</p>
+                        <span class="project-link"><i class="fa-brands fa-github"></i> Código en GitHub</span>
                     </div>
                 </a>
-                <a id="link" href="https://github.com/AdrianCobo/perception_system">
-                    <div class="proyecto">
-                        <img src="img/p13.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Perception System</h3>
-                            <p>Bachelor's Thesis</p>
-                        </div>
+                <a class="project featured reveal" data-cat="vision" href="https://github.com/AdrianCobo/perception_system" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p13.png" alt="Sistema de percepción robótica" loading="lazy" width="1600" height="1200"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Trabajo Fin de Grado</span>
+                        <h3>Sistema de percepción</h3>
+                        <p>Sistema de percepción para robots basado en visión artificial.</p>
+                        <span class="project-link"><i class="fa-brands fa-github"></i> Código en GitHub</span>
                     </div>
                 </a>
-                <a id="link" href="https://github.com/AdrianCobo/my_bot">
-                    <div class="proyecto">
-                        <img src="img/p2.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>My Bot</h3>
-                            <p>MK1</p>
-                        </div>
+
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2023/11/autonomous-drone-for-search-and-rescue.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p8.jpg" alt="Dron autónomo" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Robótica aérea</span>
+                        <h3>Dron autónomo de búsqueda y rescate</h3>
+                        <p>Misión autónoma de búsqueda y rescate con un dron.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2023/11/autonomous-drone-for-search-and-rescue.html">
-                    <div class="proyecto">
-                        <img src="img/p8.jpg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Autonomous drone</h3>
-                            <p>search and rescue</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2024/01/ompl-amazon-warehouse.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p10.jpg" alt="Robot logístico en almacén" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Planificación · OMPL</span>
+                        <h3>Robot logístico de almacén</h3>
+                        <p>Planificación de trayectorias con OMPL en un almacén tipo Amazon.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2024/01/ompl-amazon-warehouse.html">
-                    <div class="proyecto">
-                        <img src="img/p10.jpg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Logistic Robot</h3>
-                            <p>Amazon Warehouse</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2023/12/autoparking.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p9.jpeg" alt="Aparcamiento autónomo" loading="lazy" width="1024" height="1024"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Conducción autónoma</span>
+                        <h3>Aparcamiento autónomo</h3>
+                        <p>Vehículo que detecta un hueco libre y aparca sin intervención.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2023/12/autoparking.html">
-                    <div class="proyecto">
-                        <img src="img/p9.jpeg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Autonomous Parking</h3>
-                            <p>robot</p>
-                        </div>
+                <a class="project reveal" data-cat="vision" href="https://www.youtube.com/watch?v=vHrasyYaIB4" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p11.jpg" alt="Agente de IA que busca comida" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Aprendizaje por refuerzo</span>
+                        <h3>IA busca-comida</h3>
+                        <p>Agente que aprende a encontrar comida mediante aprendizaje por refuerzo.</p>
+                        <span class="project-link"><i class="fa-brands fa-youtube"></i> Ver vídeo</span>
                     </div>
                 </a>
-                <a id="link" href="https://www.youtube.com/watch?v=vHrasyYaIB4">
-                    <div class="proyecto">
-                        <img src="img/p11.jpg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>IA Busca-comida</h3>
-                            <p>aprendizaje por refuerzo</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2023/10/localized-vacuum-cleaner.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p7.jpg" alt="Robot aspirador" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Cobertura · BSA</span>
+                        <h3>Aspiradora autónoma localizada</h3>
+                        <p>Cobertura completa de una vivienda con el algoritmo BSA.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2023/10/localized-vacuum-cleaner.html">
-                    <div class="proyecto">
-                        <img src="img/p7.jpg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Localized Vacuum Cleaner</h3>
-                            <p>Autonomous Vacuum</p>
-                            <p>BSA Algorithm</p>
-                        </div>
+                <a class="project reveal" data-cat="vision" href="https://cobichuelo-learn-robotic.blogspot.com/2022/11/follow-line-formula-1.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p1.png" alt="Fórmula 1 sigue-líneas" loading="lazy" width="316" height="217"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Control visual</span>
+                        <h3>Fórmula 1 sigue-líneas</h3>
+                        <p>Control de un monoplaza a partir de la detección visual de la línea.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2022/11/follow-line-formula-1.html">
-                    <div class="proyecto">
-                        <img src="img/p1.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Formula 1</h3>
-                            <p>Follow Line</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2022/11/obstacle-avoidance.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p4.png" alt="Navegación local con evitación de obstáculos" loading="lazy" width="379" height="295"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Navegación local · VFF</span>
+                        <h3>Evitación de obstáculos</h3>
+                        <p>Navegación local reactiva con el algoritmo Virtual Force Field.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2022/11/obstacle-avoidance.html">
-                    <div class="proyecto">
-                        <img src="img/p4.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Local Navigation</h3>
-                            <p>VFF Algorithm</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://cobichuelo-learn-robotic.blogspot.com/2022/12/global-navigation-using-teletaxi.html" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p3.png" alt="Navegación global en una ciudad" loading="lazy" width="394" height="378"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Navegación global · Wavefront</span>
+                        <h3>Navegación global (TeleTaxi)</h3>
+                        <p>Planificación de rutas en un mapa urbano con el algoritmo Wavefront.</p>
+                        <span class="project-link"><i class="fa-solid fa-pen-nib"></i> Leer en el blog</span>
                     </div>
                 </a>
-                <a id="link" href="https://github.com/AdrianCobo/InteligenciaArtificial">
-                    <div class="proyecto">
-                        <img src="img/p5.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Inteligencia Artificial</h3>
-                            <p>cs 188 berkeley</p>
-                            <p>(private repo)</p>
-                        </div>
+                <a class="project reveal" data-cat="robotica" href="https://github.com/AdrianCobo/my_bot" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p2.png" alt="Modelo 3D del robot My Bot" loading="lazy" width="480" height="270"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Robótica · ROS</span>
+                        <h3>My Bot MK1</h3>
+                        <p>Primera versión de mi propio robot móvil.</p>
+                        <span class="project-link"><i class="fa-brands fa-github"></i> Código en GitHub</span>
                     </div>
                 </a>
-                <a id="link" href="https://github.com/AdrianCobo/PoseEstimation">
-                    <div class="proyecto">
-                        <img src="img/p6.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Openpose </h3>
-                            <p>Murtaza's Workshop</p>
-                            <p>(Youtube Course)</p>
-                        </div>
+                <a class="project reveal" data-cat="vision" href="https://github.com/AdrianCobo/InteligenciaArtificial" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p5.png" alt="Pacman del curso CS188 de Berkeley" loading="lazy" width="1108" height="634"></div>
+                    <div class="project-body">
+                        <span class="project-cat">IA clásica · CS188 Berkeley</span>
+                        <h3>Inteligencia Artificial</h3>
+                        <p>Búsqueda, juegos adversarios y aprendizaje sobre el entorno Pacman. Repositorio privado.</p>
+                        <span class="project-link"><i class="fa-brands fa-github"></i> GitHub (privado)</span>
                     </div>
                 </a>
-                <a id="link" href="https://www.youtube.com/watch?v=86McziTxcYg">
-                    <div class="proyecto">
-                        <img src="img/p12.jpg" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Clasificador de Pokemons</h3>
-                            <p>Machine Learning</p>
-                        </div>
+                <a class="project reveal" data-cat="vision" href="https://github.com/AdrianCobo/PoseEstimation" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p6.png" alt="Estimación de pose humana" loading="lazy" width="587" height="411"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Visión · OpenPose</span>
+                        <h3>Estimación de pose humana</h3>
+                        <p>Detección de puntos clave del cuerpo con OpenPose (Murtaza's Workshop).</p>
+                        <span class="project-link"><i class="fa-brands fa-github"></i> Código en GitHub</span>
                     </div>
                 </a>
-                <a id="link" href="https://cobichuelo-learn-robotic.blogspot.com/2022/12/global-navigation-using-teletaxi.html">
-                    <div class="proyecto">
-                        <img src="img/p3.png" alt="" height="255">
-                        <div class="overlay">
-                            <h3>Global Navigation</h3>
-                            <p>Wave Frot Algorithm</p>
-                        </div>
+                <a class="project reveal" data-cat="vision" href="https://www.youtube.com/watch?v=86McziTxcYg" target="_blank" rel="noopener noreferrer">
+                    <div class="project-img"><img src="img/p12.jpg" alt="Clasificador de Pokémon" loading="lazy" width="1280" height="720"></div>
+                    <div class="project-body">
+                        <span class="project-cat">Machine Learning</span>
+                        <h3>Clasificador de Pokémon</h3>
+                        <p>Red neuronal que reconoce Pokémon a partir de imágenes.</p>
+                        <span class="project-link"><i class="fa-brands fa-youtube"></i> Ver vídeo</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- footer -->
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/AdrianCobo"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/cobo_24.7/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/adri%C3%A1n-cobo-merino-8909991b1/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/@CobichueloRoboticsEsp"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    <!-- EVENTOS -->
+    <section id="eventos" class="section section-alt">
+        <div class="container">
+            <header class="section-head reveal">
+                <span class="eyebrow">04 — Eventos</span>
+                <h2>Eventos y conferencias</h2>
+                <p class="section-intro">Ferias y conferencias de robótica y defensa a las que he asistido para seguir de cerca el estado del arte y conectar con la industria.</p>
+            </header>
+
+            <div class="events-year reveal">
+                <span class="year">2026</span>
+                <span class="year-line" aria-hidden="true"></span>
+                <span class="year-count">2 eventos · Dinamarca</span>
+            </div>
+
+            <div class="events">
+                <!-- Para añadir un evento: duplica un <article class="event"> y cambia sus datos -->
+                <article class="card event reveal">
+                    <div class="event-date">
+                        <span class="event-month">Ago</span>
+                        <span class="event-days">19–20</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <span class="event-place">
+                                <svg class="flag" viewBox="0 0 37 28" aria-hidden="true"><rect width="37" height="28" fill="#C8102E"/><rect x="12" width="4" height="28" fill="#fff"/><rect y="12" width="37" height="4" fill="#fff"/></svg>
+                                Herning, Dinamarca
+                            </span>
+                            <span class="event-type">Feria de defensa</span>
+                            <span class="event-role"><i class="fa-solid fa-id-badge"></i> Asistente</span>
+                        </div>
+                        <h3>DALO Industry Days 2026</h3>
+                        <p>La mayor feria de la industria de defensa de Escandinavia, organizada por la agencia de adquisiciones y logística del Ministerio de Defensa danés (DALO) en el MCH Messecenter Herning. Reunió a 1.244 empresas expositoras de 28 países de los sectores terrestre, marítimo, aéreo y espacial, ciberseguridad y seguridad, con demostraciones de drones en vivo.</p>
+                        <ul class="tags">
+                            <li>Defensa</li><li>Drones</li><li>Networking B2B</li>
+                        </ul>
+                        <a class="event-link" href="https://www.daloindustrydays.com/" target="_blank" rel="noopener noreferrer">Web del evento <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="card event reveal">
+                    <div class="event-date">
+                        <span class="event-month">Ago</span>
+                        <span class="event-days">21</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <span class="event-place">
+                                <svg class="flag" viewBox="0 0 37 28" aria-hidden="true"><rect width="37" height="28" fill="#C8102E"/><rect x="12" width="4" height="28" fill="#fff"/><rect y="12" width="37" height="4" fill="#fff"/></svg>
+                                Ørsted, Dinamarca
+                            </span>
+                            <span class="event-type">Jornada de innovación</span>
+                            <span class="event-role"><i class="fa-solid fa-id-badge"></i> Asistente</span>
+                        </div>
+                        <h3>DALO Innovation Day 2026</h3>
+                        <p>Jornada de innovación tecnológica organizada por DALO en el campo de tiro de Hevring bajo el lema <em>Future Combat Solutions</em>. Acceso restringido a participantes con solicitud previa aprobada por la organización.</p>
+                        <ul class="tags">
+                            <li>Future Combat Solutions</li><li>Innovación</li><li>Defensa</li>
+                        </ul>
+                        <a class="event-link" href="https://www.daloindustrydays.com/exhibition/activities/range-day-innovation-day" target="_blank" rel="noopener noreferrer">Web del evento <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="events-year reveal">
+                <span class="year">2023</span>
+                <span class="year-line" aria-hidden="true"></span>
+                <span class="year-count">1 evento · España</span>
+            </div>
+
+            <div class="events">
+                <article class="card event reveal">
+                    <div class="event-date">
+                        <span class="event-month">Sep</span>
+                        <span class="event-days">29</span>
+                        <span class="event-year">2023</span>
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <span class="event-place">
+                                <svg class="flag" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" fill="#AA151B"/><rect y="6" width="36" height="12" fill="#F1BF00"/></svg>
+                                Fuenlabrada, Madrid
+                            </span>
+                            <span class="event-type">Conferencia</span>
+                            <span class="event-role"><i class="fa-solid fa-id-badge"></i> Asistente</span>
+                        </div>
+                        <h3>ROSCon Madrid 2023</h3>
+                        <p>Conferencia de la comunidad ROS en España, celebrada en el Campus de Fuenlabrada de la Universidad Rey Juan Carlos, con ponencias de empresas y grupos de investigación sobre ROS y navegación autónoma. Asistí como estudiante del Grado en Ingeniería de Robótica Software.</p>
+                        <ul class="tags">
+                            <li>ROS 2</li><li>Comunidad open source</li><li>Robótica</li>
+                        </ul>
+                        <a class="event-link" href="https://roscon.org.es/ROSConMadrid2023.html" target="_blank" rel="noopener noreferrer">Web del evento <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <header class="section-head reveal">
+                <span class="eyebrow">05 — Skills</span>
+                <h2>Tecnologías y competencias</h2>
+            </header>
+
+            <div class="skills-grid">
+                <article class="card skill-group reveal">
+                    <div class="skill-head"><i class="fa-solid fa-code"></i><h3>Lenguajes</h3></div>
+                    <ul class="chips">
+                        <li class="core">Python</li><li class="core">C++</li><li>C</li><li>JavaScript</li><li>Solidity</li>
+                    </ul>
+                </article>
+                <article class="card skill-group reveal">
+                    <div class="skill-head"><i class="fa-solid fa-robot"></i><h3>Robótica</h3></div>
+                    <ul class="chips">
+                        <li class="core">ROS 2</li><li>ROS</li><li class="core">Navegación autónoma</li><li>SLAM</li><li>Localización</li><li>Planificación (OMPL)</li><li>Drones</li>
+                    </ul>
+                </article>
+                <article class="card skill-group reveal">
+                    <div class="skill-head"><i class="fa-solid fa-eye"></i><h3>Visión e IA</h3></div>
+                    <ul class="chips">
+                        <li class="core">Visión artificial</li><li class="core">PyTorch</li><li>Deep Learning</li><li>Machine Learning</li><li>Aprendizaje por refuerzo</li><li>Nubes de puntos 3D</li><li>Fusión de sensores</li><li>Detección y segmentación</li><li>Edge computing</li>
+                    </ul>
+                </article>
+                <article class="card skill-group reveal">
+                    <div class="skill-head"><i class="fa-solid fa-people-group"></i><h3>Profesionales</h3></div>
+                    <ul class="chips">
+                        <li class="core">Dirección técnica</li><li>Gestión de proyectos</li><li>Comunicación</li><li>Trabajo en equipo</li><li>Creatividad</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <div class="contact-card reveal">
+                <span class="eyebrow">06 — Contacto</span>
+                <h2>¿Hablamos?</h2>
+                <p>Abierto a colaboraciones y proyectos en robótica autónoma, visión artificial y sistemas counter-UAS.</p>
+                <div class="contact-actions">
+                    <a href="mailto:adrian.cobo.mh@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> adrian.cobo.mh@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/adri%C3%A1n-cobo-merino-8909991b1/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- PIE -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year">2026</span> Adrián Cobo · Madrid, España</p>
+            <div class="social">
+                <a href="https://github.com/AdrianCobo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/adri%C3%A1n-cobo-merino-8909991b1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@CobichueloRoboticsEsp" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://cobichuelo-learn-robotic.blogspot.com/" target="_blank" rel="noopener noreferrer" aria-label="Blog"><i class="fa-solid fa-pen-nib"></i></a>
+            </div>
+            <a href="#inicio" class="to-top" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
 

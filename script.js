@@ -1,41 +1,78 @@
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
+const header = document.getElementById("header");
+const nav = document.getElementById("nav");
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = nav.querySelectorAll("a");
+
+// Menú móvil: abrir / cerrar
+function cerrarMenu(){
+    nav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Abrir menú");
+    navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
 }
 
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
-    }
-}
+navToggle.addEventListener("click", function(){
+    const abierto = nav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", abierto);
+    navToggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+    navToggle.innerHTML = abierto ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
 
+// Cierro el menú al elegir una opción o pulsar Escape
+navLinks.forEach(function(link){
+    link.addEventListener("click", cerrarMenu);
+});
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") cerrarMenu();
+});
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
+// Fondo de la cabecera y enlace activo del menú según la sección visible
+const secciones = document.querySelectorAll("main section[id]");
+function actualizarScroll(){
+    header.classList.toggle("scrolled", window.scrollY > 10);
+
+    const referencia = window.innerHeight * 0.4;
+    let actual = "";
+    secciones.forEach(function(s){
+        if(s.getBoundingClientRect().top <= referencia) actual = s.id;
+    });
+    navLinks.forEach(function(link){
+        link.classList.toggle("active", link.getAttribute("href") === "#" + actual);
+    });
+}
+window.addEventListener("scroll", actualizarScroll, { passive: true });
+actualizarScroll();
+
+// Animación de entrada de los bloques
+const observadorReveal = new IntersectionObserver(function(entradas){
+    entradas.forEach(function(entrada){
+        if(entrada.isIntersecting){
+            entrada.target.classList.add("visible");
+            observadorReveal.unobserve(entrada.target);
+        }
+    });
+}, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+document.querySelectorAll(".reveal").forEach(function(el){
+    observadorReveal.observe(el);
+});
+
+// Filtro de proyectos
+const filtros = document.querySelectorAll(".filter");
+const proyectos = document.querySelectorAll(".project");
+filtros.forEach(function(boton){
+    boton.addEventListener("click", function(){
+        const categoria = boton.dataset.filter;
+        filtros.forEach(function(b){
+            b.classList.toggle("is-active", b === boton);
+            b.setAttribute("aria-pressed", b === boton);
+        });
+        proyectos.forEach(function(p){
+            const mostrar = categoria === "todos" || p.dataset.cat === categoria;
+            p.classList.toggle("is-hidden", !mostrar);
+            if(mostrar) p.classList.add("visible");
+        });
+    });
+});
+
+// Año actual en el pie
+document.getElementById("year").textContent = new Date().getFullYear();
